@@ -484,7 +484,7 @@ var render = function() {
     ? _c(
         "div",
         {
-          staticClass: "col-md-8 mx-auto mt-5 custom-trans",
+          staticClass: "col-md-8 mx-auto mt-md-5 custom-trans",
           attrs: { id: "portfolio" }
         },
         [
@@ -854,7 +854,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _vm.article
-    ? _c("div", { staticClass: "col-md-8 mx-auto mt-5 custom-trans" }, [
+    ? _c("div", { staticClass: "col-md-8 mx-auto mt-md-5 custom-trans" }, [
         _c("div", { staticClass: "row" }, [
           _c(
             "div",

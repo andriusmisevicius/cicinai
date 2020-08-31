@@ -1,5 +1,5 @@
 <template>
-    <div id="portfolio" class="col-md-8 mx-auto mt-5 custom-trans" v-if="event">
+    <div id="portfolio" class="col-md-8 mx-auto mt-md-5 custom-trans" v-if="event">
         <div class="row">
 <!--            <div class="col-4">-->
 <!--                <img :src="`/${article.imagePath}`" class="rounded img-fluid" :alt="article.title">-->

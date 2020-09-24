@@ -58,6 +58,11 @@ class Event extends Model
     |--------------------------------------------------------------------------
     */
 
+    public function setTitleAttribute($value){
+        $this->attributes['title'] = $value;
+        $this->attributes['slug'] = Str::slug($value).Str::random(5);
+    }
+
     public function setImagePathAttribute($value)
     {
         $attribute_name = "image_path";

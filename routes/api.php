@@ -61,7 +61,7 @@ Route::get('/events', function (Request $request) {
         $date = \Carbon\Carbon::parse($request->query('date'));
         return EventResource::collection(Event::whereDate('date',$date)->orderBy('date','DESC')->paginate(8));
     }
-    return EventResource::collection(Event::where('date','>=',now())->orderBy('date','DESC')->paginate(8));
+    return EventResource::collection(Event::orderBy('date','DESC')->paginate(8));
 });
 
 Route::get('/event/{slug}', function ($slug = null) {

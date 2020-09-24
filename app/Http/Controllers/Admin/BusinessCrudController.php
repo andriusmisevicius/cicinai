@@ -63,7 +63,6 @@ class BusinessCrudController extends CrudController
 
         CRUD::addField(['name' => 'title', 'type' => 'text', 'label' => 'Pavadinimas']);
         CRUD::addField(['name' => 'url', 'type' => 'text', 'label' => 'Verslo nuoroda']);
-        CRUD::addField(['name' => 'slug', 'type' => 'text', 'label' => 'Nuoroda', 'attributes' => ['placeholder' => 'jusu-nuoroda-i-naujiena']]);
         CRUD::addField(['name' => 'content', 'type' => 'wysiwyg', 'label' => 'Turinys']);
         CRUD::addField(['name' => 'image_path', 'type' => 'image', 'label' => 'Naujienos paveikslėlis']);
 

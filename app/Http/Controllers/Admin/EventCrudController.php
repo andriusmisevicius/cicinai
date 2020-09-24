@@ -62,7 +62,6 @@ class EventCrudController extends CrudController
         CRUD::setValidation(EventRequest::class);
 
         CRUD::addField(['name' => 'title', 'type' => 'text', 'label' => 'Pavadinimas']);
-        CRUD::addField(['name' => 'slug', 'type' => 'text', 'label' => 'Nuoroda', 'attributes' => ['placeholder' => 'jusu-nuoroda-i-naujiena']]);
         CRUD::addField(['name' => 'content', 'type' => 'wysiwyg', 'label' => 'Turinys']);
         CRUD::addField(['name' => 'date', 'type' => 'datetime', 'label' => 'Renginio data']);
         CRUD::addField(['name' => 'image_path', 'type' => 'image', 'label' => 'Naujienos paveikslėlis','crop' => true,'aspect_ratio' => 0,5,]);

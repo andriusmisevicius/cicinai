@@ -58,7 +58,7 @@ class Business extends Model
 
     public function setTitleAttribute($value){
         $this->attributes['title'] = $value;
-        $this->attributes['slug'] = Str::slug($value).Str::random(5);
+        $this->attributes['slug'] = Str::slug($value);
     }
 
     public function setImagePathAttribute($value)

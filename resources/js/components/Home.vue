@@ -46,6 +46,18 @@
                     </div>
                 </div>
             </div>
+            <div class="container mt-5 mb-5">
+                <h1 class="display-5 text-center">Remėjų renginiai</h1>
+                <div class="card-deck">
+                    <div class="card custom-trans">
+                        <img src="/images/skaitmeninio-rastingumo-mokymai.png" class="card-img-top img-fluid">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Skaitmeninio raštingumo mokymai</h3>
+                            <a href="https://www.prisijungusi.lt/mokymai" target="_blank" title="Daugiau detalių" class="btn btn-success"><i class="bx bx-plus"></i>Daugiau detalių</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 </template>
 

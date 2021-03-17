@@ -49,7 +49,7 @@
             <div class="container mt-5 mb-5">
                 <h1 class="display-5 text-center">Remėjų renginiai</h1>
                 <div class="card-deck">
-                    <div class="card custom-trans">
+                    <div class="card custom-trans mx-auto" style="max-width: 33%">
                         <img src="/images/skaitmeninio-rastingumo-mokymai.png" class="card-img-top img-fluid">
                         <div class="card-body text-center">
                             <h3 class="card-title">Skaitmeninio raštingumo mokymai</h3>

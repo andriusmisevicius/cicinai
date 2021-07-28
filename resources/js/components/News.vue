@@ -11,18 +11,24 @@
                 </div>
             </div>
             <div class="col-12 card-columns">
-                <div class="card portfolio-wrap" v-for="news in computedNews">
-                    <img :src="`/${news.imagePath}`" class="card-img-top">
-                    <div class="portfolio-info">
-                        <h4>{{news.title}}</h4>
-                        <p>{{news.createdAt}}</p>
-                        <div class="portfolio-links">
+                <div class="card border-dark" v-for="news in computedNews">
+                    <div class="" v-if="news.imagePath">
+                        <img :src="'/'+news.imagePath" class="card-img-top">
+                    </div>
+                    <div class="card-header bg-dark">
+                        <h4>
                             <router-link :to="{name: 'News Details', params: {
-                                    article: news,
-                                    category: currentCategory || 'Visos',
-                                    slug: news.slug
-                                }}" title="Daugiau detalių"><i class="bx bx-plus"></i></router-link>
-                        </div>
+                                article: news,
+                                category: currentCategory || 'Visos',
+                                slug: news.slug
+                            }}" title="Daugiau detalių">{{news.title}}</router-link>
+                        </h4>
+                        <p>{{news.createdAt}}</p>
+                        <router-link class="btn btn-outline-primary" :to="{name: 'News Details', params: {
+                                article: news,
+                                category: currentCategory || 'Visos',
+                                slug: news.slug
+                            }}" title="Daugiau detalių">Plačiau</router-link>
                     </div>
                 </div>
             </div>

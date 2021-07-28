@@ -12,17 +12,22 @@
                     ></date-picker>
                 </div>
                 <div class="col-12 card-columns pt-2">
-                    <div class="card portfolio-wrap" v-for="entry in computedEvents">
-                        <img :src="'/'+entry.imagePath" class="card-img-top">
-                        <div class="portfolio-info">
-                            <h4>{{entry.title}}</h4>
-                            <p>{{entry.date}}</p>
-                            <div class="portfolio-links">
+                    <div class="card border-dark" v-for="entry in computedEvents">
+                        <div class="" v-if="entry.imagePath">
+                            <img :src="'/'+entry.imagePath" class="card-img-top">
+                        </div>
+                        <div class="card-header bg-dark">
+                            <h4>
                                 <router-link :to="{name: 'Event Details', params: {
                                 event: entry,
                                 slug: entry.slug
-                            }}" title="Daugiau detalių"><i class="bx bx-plus"></i></router-link>
-                            </div>
+                            }}" title="Daugiau detalių">{{entry.title}}</router-link>
+                            </h4>
+                            <p>{{entry.date}}</p>
+                            <router-link class="btn btn-outline-primary" :to="{name: 'Event Details', params: {
+                                event: entry,
+                                slug: entry.slug
+                            }}" title="Daugiau detalių">Plačiau</router-link>
                         </div>
                     </div>
                 </div>

@@ -16,32 +16,48 @@
             </div>
             <div class="container mt-3 ">
                 <h1 class="display-5 text-center">Paskutinės naujienos</h1>
-                <div class="card-deck">
-                    <div class="card custom-trans" v-for="entry in news">
-                        <img :src="`/${entry.imagePath}`" style="max-height: 200px;object-fit: cover;" class="card-img-top img-fluid">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">{{entry.title}}</h3>
-                            <p class="card-text">{{entry.createdAt}}</p>
-                            <router-link :to="{name: 'News Details', params: {
-                                    article: entry,
-                                    slug: entry.slug
-                                }}" title="Daugiau detalių" class="btn btn-success"><i class="bx bx-plus"></i>Daugiau detalių</router-link>
+                <div class="col-12 card-columns">
+                    <div class="card border-dark" v-for="news in news">
+                        <div class="" v-if="news.imagePath">
+                            <img :src="'/'+news.imagePath" class="card-img-top">
+                        </div>
+                        <div class="card-header bg-dark">
+                            <h4>
+                                <router-link :to="{name: 'News Details', params: {
+                                article: news,
+                                category: 'Visos',
+                                slug: news.slug
+                            }}" title="Daugiau detalių">{{news.title}}</router-link>
+                            </h4>
+                            <p>{{news.createdAt}}</p>
+                            <router-link class="btn btn-outline-primary" :to="{name: 'News Details', params: {
+                                article: news,
+                                category: 'Visos',
+                                slug: news.slug
+                            }}" title="Daugiau detalių">Plačiau</router-link>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container mt-5 mb-5">
                 <h1 class="display-5 text-center">Naujausi renginiai</h1>
-                <div class="card-deck">
-                    <div class="card custom-trans" v-for="entry in events">
-                        <img :src="`/${entry.imagePath}`" style="max-height: 200px;object-fit: cover;" class="card-img-top img-fluid">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">{{entry.title}}</h3>
-                            <p class="card-text">Renginio data: {{entry.date}}</p>
-                            <router-link :to="{name: 'Event Details', params: {
+                <div class="col-12 card-columns pt-2">
+                    <div class="card border-dark" v-for="entry in events">
+                        <div class="" v-if="entry.imagePath">
+                            <img :src="'/'+entry.imagePath" class="card-img-top">
+                        </div>
+                        <div class="card-header bg-dark">
+                            <h4>
+                                <router-link :to="{name: 'Event Details', params: {
                                 event: entry,
                                 slug: entry.slug
-                            }}" title="Daugiau detalių" class="btn btn-success"><i class="bx bx-plus"></i>Daugiau detalių</router-link>
+                            }}" title="Daugiau detalių">{{entry.title}}</router-link>
+                            </h4>
+                            <p>{{entry.date}}</p>
+                            <router-link class="btn btn-outline-primary" :to="{name: 'Event Details', params: {
+                                event: entry,
+                                slug: entry.slug
+                            }}" title="Daugiau detalių">Plačiau</router-link>
                         </div>
                     </div>
                 </div>

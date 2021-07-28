@@ -1,5 +1,5 @@
 <template>
-    <div class="col-8 mx-auto mt-md-5 mb-md-5">
+    <div class="col-sm-12 col-md-8 mx-auto mt-sm-3 mt-md-5 mb-sm-3 mb-md-5">
         <div class="card custom-trans" v-if="article">
             <div class="card-header bg-dark">
                 <h1 class="text-center font-weight-bold">{{ article.title }}</h1>
@@ -24,7 +24,7 @@
                         width: 100%;
                     `"
                 >
-                    <img class="img-fluid" :src="article.imagePath">
+                    <a target="_blank" :href="article.imagePath"><img class="img-fluid" :src="article.imagePath"></a>
                 </div>
 
             </div>
